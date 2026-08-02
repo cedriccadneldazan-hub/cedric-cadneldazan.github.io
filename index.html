@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prénom Nom — Sécurité des Systèmes d'Information</title>
+<meta name="description" content="Portfolio professionnel — Étudiant en Sécurité des Systèmes d'Information, spécialisé en cybersécurité, réseaux et administration système.">
+<!-- Favicon : remplacez par votre propre icône si besoin -->
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ BOUTON MENU MOBILE ============ -->
+<button id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="sidebar">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- ============ NAVIGATION LATÉRALE ============ -->
+<nav id="sidebar" class="sidebar" aria-label="Navigation principale">
+  <div class="sidebar__brand">
+    <span class="sidebar__logo" aria-hidden="true">&gt;_</span>
+    <div class="sidebar__id">
+      <strong>Prénom Nom</strong>
+      <span>SSI · Cybersécurité</span>
+    </div>
+  </div>
+
+  <ul class="sidebar__nav">
+    <li><a href="#accueil" class="nav-link" data-tag="127.0.0.1">Accueil</a></li>
+    <li><a href="#profil" class="nav-link" data-tag="10.0.0.0/30">Profil</a></li>
+    <li><a href="#competences" class="nav-link" data-tag="10.0.1.0/24">Compétences</a></li>
+    <li><a href="#projets" class="nav-link" data-tag="10.0.2.0/24">Projets</a></li>
+    <li><a href="#experience" class="nav-link" data-tag="10.0.3.0/24">Expérience</a></li>
+    <li><a href="#certifications" class="nav-link" data-tag="10.0.4.0/24">Certifications</a></li>
+    <li><a href="#contact" class="nav-link" data-tag="10.0.5.0/24">Contact</a></li>
+  </ul>
+
+  <div class="sidebar__footer">
+    <!-- Remplacez ces liens par vos profils réels -->
+    <a href="https://www.linkedin.com/in/VOTRE-PROFIL" class="icon-link" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/VOTRE-PROFIL" class="icon-link" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section id="accueil" class="section hero">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <p class="terminal" aria-hidden="true">
+          <span class="terminal__prompt">visiteur@portfolio</span><span class="terminal__sep">:~$</span>
+          <span class="terminal__cmd" id="typed-cmd"></span><span class="cursor">▍</span>
+        </p>
+        <h1 class="hero__title">
+          Prénom <span class="accent">Nom</span>
+        </h1>
+        <p class="hero__subtitle">
+          Étudiant en 3<sup>e</sup> année — Sécurité des Systèmes d'Information (SSI)
+        </p>
+        <p class="hero__text">
+          Passionné de cybersécurité, réseaux et administration système. En route vers un poste
+          d'<strong>ingénieur d'affaires informatique</strong> orienté IT / cybersécurité, à la croisée
+          de la technique et de la relation client.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Me contacter</a>
+          <!-- Placez votre CV à l'emplacement assets/cv.pdf -->
+          <a href="assets/cv.pdf" class="btn btn--ghost" download>Télécharger le CV</a>
+        </div>
+      </div>
+
+      <div class="hero__photo-wrap">
+        <div class="hero__frame">
+          <!-- Remplacez cette image par votre photo : assets/photo.jpg -->
+          <img src="assets/photo.jpg" alt="Photo de profil de Prénom Nom" class="hero__photo"
+               onerror="this.onerror=null;this.replaceWith(document.getElementById('photo-placeholder').content.cloneNode(true));">
+          <template id="photo-placeholder">
+            <div class="hero__photo hero__photo--placeholder" role="img" aria-label="Emplacement pour votre photo">
+              <span>PHOTO<br>À AJOUTER</span>
+            </div>
+          </template>
+        </div>
+        <span class="hero__badge">assets/photo.jpg</span>
+      </div>
+    </div>
+    <a href="#profil" class="scroll-hint" aria-hidden="true">Scroll ↓</a>
+  </section>
+
+  <!-- ============ PROFIL ============ -->
+  <section id="profil" class="section">
+    <p class="section__tag">10.0.0.0/30 — segment local</p>
+    <h2 class="section__title">Profil</h2>
+    <div class="profile-card reveal">
+      <p>
+        Étudiant en 3<sup>e</sup> année de Sécurité des Systèmes d'Information, je m'intéresse à la
+        sécurisation des infrastructures, à l'administration des systèmes Windows/Linux et à la
+        supervision des réseaux. Mon parcours combine rigueur technique et goût pour le contact client,
+        avec pour objectif d'évoluer vers un rôle d'ingénieur d'affaires informatique capable de faire
+        le lien entre besoins métiers et solutions IT / cybersécurité.
+      </p>
+      <ul class="profile-facts">
+        <li><span>Formation</span>3<sup>e</sup> année SSI — [Nom de l'établissement à compléter]</li>
+        <li><span>Domaine</span>Cybersécurité, réseaux, administration système</li>
+        <li><span>Objectif</span>Ingénieur d'affaires informatique IT / cybersécurité</li>
+        <li><span>Localisation</span>[Ville, Pays à compléter]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ COMPÉTENCES ============ -->
+  <section id="competences" class="section">
+    <p class="section__tag">10.0.1.0/24 — couche compétences</p>
+    <h2 class="section__title">Compétences</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3>Réseaux</h3>
+        <ul>
+          <li>TCP/IP, routage &amp; commutation</li>
+          <li>Cisco Packet Tracer</li>
+          <li>Wireshark — analyse de trafic</li>
+          <li>Nmap — cartographie &amp; audit</li>
+          <li>Nagios — supervision</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3>Systèmes</h3>
+        <ul>
+          <li>Windows Server 2019</li>
+          <li>Active Directory, GPO</li>
+          <li>DNS, DHCP</li>
+          <li>RADIUS</li>
+          <li>Linux / Kali Linux</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3>Développement</h3>
+        <ul>
+          <li>HTML / CSS</li>
+          <li>PHP, MySQL</li>
+          <li>Java</li>
+          <li>C++</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <section id="projets" class="section">
+    <p class="section__tag">10.0.2.0/24 — couche projets</p>
+    <h2 class="section__title">Projets</h2>
+
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <h3>Infrastructure réseau sécurisée</h3>
+        <p class="project-card__meta">Windows Server 2019</p>
+        <p>Conception et déploiement d'une infrastructure réseau sécurisée : contrôleur de domaine,
+           stratégies de groupe et gestion centralisée des utilisateurs.</p>
+        <ul class="tag-list">
+          <li>Windows Server</li><li>Sécurité</li><li>Infrastructure</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Services réseau — AD, DNS, DHCP, RADIUS</h3>
+        <p class="project-card__meta">Administration système</p>
+        <p>Mise en place d'Active Directory, DNS et DHCP, ainsi que d'un serveur RADIUS pour
+           l'authentification centralisée des accès réseau.</p>
+        <ul class="tag-list">
+          <li>Active Directory</li><li>DNS/DHCP</li><li>RADIUS</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Supervision réseau</h3>
+        <p class="project-card__meta">Nagios</p>
+        <p>Déploiement d'une solution de supervision pour surveiller la disponibilité des services
+           et des équipements réseau en temps réel.</p>
+        <ul class="tag-list">
+          <li>Nagios</li><li>Monitoring</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Analyse de trafic réseau</h3>
+        <p class="project-card__meta">Wireshark</p>
+        <p>Capture et analyse de paquets pour l'identification d'anomalies et la compréhension
+           fine des protocoles réseau.</p>
+        <ul class="tag-list">
+          <li>Wireshark</li><li>Analyse</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Simulations réseau</h3>
+        <p class="project-card__meta">Cisco Packet Tracer</p>
+        <p>Conception de topologies réseau (routage, VLAN, sécurité des accès) simulées et
+           validées sous Cisco Packet Tracer.</p>
+        <ul class="tag-list">
+          <li>Cisco</li><li>Packet Tracer</li><li>VLAN</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Applications web &amp; bases de données</h3>
+        <p class="project-card__meta">PHP · MySQL · HTML/CSS</p>
+        <p>Développement d'applications web reliées à des bases de données relationnelles,
+           de la modélisation à l'implémentation.</p>
+        <ul class="tag-list">
+          <li>PHP</li><li>MySQL</li><li>HTML/CSS</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ EXPÉRIENCE ============ -->
+  <section id="experience" class="section">
+    <p class="section__tag">10.0.3.0/24 — couche expérience</p>
+    <h2 class="section__title">Expérience</h2>
+
+    <div class="timeline">
+      <div class="timeline__item reveal">
+        <div class="timeline__marker" aria-hidden="true"></div>
+        <div class="timeline__content">
+          <h3>Stagiaire — Service informatique (DIT)</h3>
+          <p class="timeline__org">Bank of Africa — Bénin</p>
+          <p class="timeline__date">[Dates du stage à compléter]</p>
+          <p>Participation aux activités du service informatique (Direction Informatique et
+             Télécommunications) : support technique, gestion des infrastructures réseau et
+             système, contribution aux bonnes pratiques de sécurité informatique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications" class="section">
+    <p class="section__tag">10.0.4.0/24 — couche certifications</p>
+    <h2 class="section__title">Certifications</h2>
+    <p class="section__note">Section facilement modifiable : copiez un bloc <code>&lt;li&gt;</code> ci-dessous dans <code>index.html</code> pour ajouter une nouvelle certification.</p>
+
+    <ul class="cert-list">
+      <li class="cert-card reveal">
+        <div class="cert-card__icon" aria-hidden="true">✓</div>
+        <div>
+          <h3>Introduction to Cybersecurity</h3>
+          <p class="cert-card__org">Cisco Networking Academy</p>
+          <p class="cert-card__date">[Date d'obtention à compléter]</p>
+        </div>
+      </li>
+
+      <!-- 
+        MODÈLE — dupliquez ce bloc pour ajouter une certification :
+        <li class="cert-card reveal">
+          <div class="cert-card__icon" aria-hidden="true">✓</div>
+          <div>
+            <h3>Nom de la certification</h3>
+            <p class="cert-card__org">Organisme émetteur</p>
+            <p class="cert-card__date">Date d'obtention</p>
+          </div>
+        </li>
+      -->
+    </ul>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section section--contact">
+    <p class="section__tag">10.0.5.0/24 — couche contact</p>
+    <h2 class="section__title">Contact</h2>
+    <div class="contact-card reveal">
+      <p>Ouvert aux stages, alternances et opportunités liées à l'IT et à la cybersécurité.
+         N'hésitez pas à me contacter.</p>
+      <ul class="contact-list">
+        <li>
+          <span>Email</span>
+          <a href="mailto:votre.email@example.com">votre.email@example.com</a>
+        </li>
+        <li>
+          <span>Téléphone</span>
+          <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
+        </li>
+        <li>
+          <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener">linkedin.com/in/votre-profil</a>
+        </li>
+        <li>
+          <span>GitHub</span>
+          <a href="https://github.com/VOTRE-PROFIL" target="_blank" rel="noopener">github.com/votre-profil</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Prénom Nom — Portfolio SSI / Cybersécurité</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
